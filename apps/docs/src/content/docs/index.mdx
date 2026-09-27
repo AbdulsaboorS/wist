@@ -1,0 +1,39 @@
+---
+title: Introduction
+description: Wist hands your coding agent's work to your personal assistant, with your approval.
+---
+
+Wist moves a project from your coding agent to your personal assistant. Claude Code or Codex writes
+down where the work stands, you approve it, and Muse continues from there with the same context and
+tools.
+
+GitHub gives an assistant your code. Wist gives it the rest: the goal, what's done, what was decided
+and why, what's blocking, and what comes next.
+
+## How it works
+
+1. **Hand off.** In the Wist dashboard, click **Hand off** next to a project. Your coding agent writes
+   a Handoff from a copy of your latest session.
+2. **Approve.** You read exactly what will be shared. Nothing leaves your computer until you approve
+   it.
+3. **Connect.** You give your assistant a private Connection link. It reads the Handoff and a setup
+   plan for the project's tools, then asks you to sign in to each tool on its side.
+
+## Set it up with your coding agent
+
+To let your coding agent set up Wist and write the first Handoff, paste this prompt into Claude Code
+or Codex in your project:
+
+```text
+Install the Wist CLI with `npm install -g @wist/cli`. Then run `wist skill` and follow those
+instructions to write a Handoff of the work in this repository. When the draft is saved, tell me
+to run `wist` to review and share it.
+```
+
+To set it up yourself instead, see [Get started](/get-started/).
+
+## Next steps
+
+- [Get started](/get-started/): install Wist and open the dashboard.
+- [Connect Muse](/guides/connect-muse/): give Muse your first Handoff.
+- [What's shared](/concepts/what-is-shared/): see what leaves your computer and what stays.

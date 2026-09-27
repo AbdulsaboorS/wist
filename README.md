@@ -10,6 +10,8 @@ exactly what each assistant sees, and you can take it back at any time.
 npx @wist/cli
 ```
 
+Website: [wist.fyi](https://wist.fyi). Docs: [docs.wist.fyi](https://docs.wist.fyi).
+
 ## How it works
 
 1. **Hand off.** The dashboard lists projects you worked on with Claude Code or Codex. Click

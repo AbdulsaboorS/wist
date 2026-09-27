@@ -6,6 +6,8 @@
 npx @wist/cli
 ```
 
+Docs: [docs.wist.fyi](https://docs.wist.fyi).
+
 The dashboard opens in your browser and lists projects you worked on with Claude Code or Codex.
 
 1. Click **Hand off**. That agent writes a Handoff from a copy of your latest session: the goal,

@@ -3,6 +3,7 @@
   "files": {
     "includes": [
       "**",
+      "!**/.astro/**",
       "!**/.turbo/**",
       "!**/coverage/**",
       "!**/dist/**",

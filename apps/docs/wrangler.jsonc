@@ -1,0 +1,8 @@
+{
+  // The documentation site at docs.wist.fyi: static files built by `astro build`.
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "wist-docs",
+  "compatibility_date": "2026-09-15",
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "docs.wist.fyi", "custom_domain": true }]
+}

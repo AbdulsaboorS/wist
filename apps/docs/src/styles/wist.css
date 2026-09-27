@@ -1,0 +1,71 @@
+/*
+ * Maps Starlight's theme variables onto the shared Wist tokens so the docs read as the same
+ * product as wist.fyi: one monospace face, a neutral page, and cobalt as the only accent.
+ * In Starlight's light theme "white" is the strongest text colour and "black" the page.
+ */
+:root,
+:root[data-theme="light"] {
+  --sl-font: var(--font-mono);
+  --sl-font-mono: var(--font-mono);
+
+  --sl-color-accent-low: #e3e7fa;
+  --sl-color-accent: var(--color-accent);
+  --sl-color-accent-high: #132a91;
+
+  --sl-color-white: var(--color-text);
+  --sl-color-gray-1: #1c2030;
+  --sl-color-gray-2: #33384a;
+  --sl-color-gray-3: var(--color-text-secondary);
+  --sl-color-gray-4: var(--color-text-tertiary);
+  --sl-color-gray-5: #c9cbd1;
+  --sl-color-gray-6: #ececee;
+  --sl-color-gray-7: var(--color-surface-sunken);
+  --sl-color-black: var(--color-surface);
+
+  --sl-color-bg-nav: var(--color-surface);
+  --sl-color-bg-sidebar: var(--color-surface);
+  --sl-color-hairline: var(--color-line);
+  --sl-color-hairline-light: var(--color-line);
+  --sl-color-hairline-shade: var(--color-line-strong);
+
+  --sl-text-base: 0.9375rem;
+  --sl-line-height: 1.7;
+}
+
+::selection {
+  background: var(--color-selection);
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4) {
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+h1#_top {
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+/* Code blocks sit in the same sunken well the landing page uses for its command row. */
+.expressive-code .frame {
+  --ec-brdRad: var(--radius-control);
+}
+
+/* The header wordmark matches wist.fyi: plain text in the body colour. */
+.site-title {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sl-markdown-content h2 {
+  font-size: 1.5rem;
+}
+
+.sl-markdown-content h3 {
+  font-size: 1.2rem;
+}
+
+h1#_top {
+  font-size: 2.25rem;
+}
