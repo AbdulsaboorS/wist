@@ -1,0 +1,20 @@
+---
+// The site title returns to the docs introduction; this link returns to the landing page.
+import Default from "@astrojs/starlight/components/SocialIcons.astro";
+---
+
+<a class="home-link" href="https://wist.fyi">wist.fyi ↗</a>
+<Default />
+
+<style>
+  .home-link {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+    text-decoration: none;
+    margin-inline-end: 0.75rem;
+    white-space: nowrap;
+  }
+  .home-link:hover {
+    color: var(--sl-color-white);
+  }
+</style>
