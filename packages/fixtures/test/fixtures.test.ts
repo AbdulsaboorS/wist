@@ -6,7 +6,7 @@ import {
   ProjectSchema,
   RuntimeSchema,
   SetupPlanSchema,
-} from "@agent-passport/domain";
+} from "@wist/domain";
 import { describe, expect, it } from "vitest";
 
 import {

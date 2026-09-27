@@ -4,7 +4,7 @@ import {
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
+} from "@wist/fixtures";
 import {
   SignJWT,
   calculateJwkThumbprint,
@@ -82,7 +82,7 @@ async function sign(
   return await new SignJWT(options.claims)
     .setProtectedHeader({ alg: "EdDSA", kid: identity.id, typ: options.type })
     .setIssuer(identity.id)
-    .setAudience("agent-passport-relay")
+    .setAudience("wist-relay")
     .setSubject(options.subject)
     .setJti(options.tokenId)
     .setIssuedAt(Math.floor(options.issuedAt.getTime() / 1_000))
@@ -96,7 +96,7 @@ export async function registerIdentity(
   now: Date,
 ): Promise<Response> {
   const proof = await sign(identity, {
-    type: "agent-passport-identity+jwt",
+    type: "wist-identity+jwt",
     subject: identity.id,
     tokenId: crypto.randomUUID(),
     issuedAt: now,
@@ -113,7 +113,7 @@ export async function registerIdentity(
 
 export async function ownerToken(identity: TestIdentity, now: Date): Promise<string> {
   return await sign(identity, {
-    type: "agent-passport-owner+jwt",
+    type: "wist-owner+jwt",
     subject: projectFixture.id,
     tokenId: crypto.randomUUID(),
     issuedAt: now,
@@ -139,7 +139,7 @@ export async function connectionToken(
   } = {},
 ): Promise<string> {
   return await sign(identity, {
-    type: "agent-passport-connection+jwt",
+    type: "wist-connection+jwt",
     subject: options.shareId ?? shareId,
     tokenId: options.tokenId ?? connectionTokenId,
     issuedAt: now,

@@ -1,4 +1,4 @@
-import { RuntimeSchema } from "@agent-passport/domain";
+import { RuntimeSchema } from "@wist/domain";
 import { createRoute, OpenAPIHono, z } from "@hono/zod-openapi";
 import type { Context } from "hono";
 import { bodyLimit } from "hono/body-limit";
@@ -700,7 +700,7 @@ export function createPassportApp(options: {
   app.doc31("/openapi.json", {
     openapi: "3.1.0",
     info: {
-      title: "Agent Passport API",
+      title: "Wist API",
       version: "0.1.0",
       description:
         "Read-only access to a project Handoff a person approved for you. Authenticate with the " +
@@ -712,13 +712,13 @@ export function createPassportApp(options: {
 }
 
 function connectGuide(origin: string): string {
-  return `# Agent Passport Connection
+  return `# Wist Connection
 
 ## If you are a person
 
 Paste the whole Connection link into your assistant, such as Muse, and ask it to continue your
-project from Agent Passport. The link is private: anyone holding it can read the Handoff you
-approved until it expires or you revoke it in your Agent Passport dashboard.
+project from Wist. The link is private: anyone holding it can read the Handoff you
+approved until it expires or you revoke it in your Wist dashboard.
 
 ## If you are an AI assistant
 

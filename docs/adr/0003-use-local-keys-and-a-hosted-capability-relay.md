@@ -6,7 +6,7 @@ Cross-machine Handoff retrieval requires authentication, Project scope, expiry, 
 
 ## Decision
 
-Agent Passport is local-first. `npx agent-passport` starts a daemon bound to `127.0.0.1`, opens the local Passport dashboard, and generates a keypair on first run. Possession of that computer and private key is the MVP identity and login; the private key remains local.
+Wist is local-first. `npx wist-cli` starts a daemon bound to `127.0.0.1`, opens the local Passport dashboard, and generates a keypair on first run. Possession of that computer and private key is the MVP identity and login; the private key remains local.
 
 Publishing sends only the approved, scoped payload to a hosted relay. The local identity signs an expiring, revocable capability token for that share. Muse presents that token to the connector API as proof of its Connection. The relay stores the public key, scoped payload, token identifier, expiry, and revocation state, never the private key or destination credentials.
 

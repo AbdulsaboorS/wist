@@ -17,7 +17,7 @@ export function Passport({ variant, drained = false, issued, ariaLabel, children
   return (
     <dl className={className} aria-label={ariaLabel}>
       <div className="pp-head">
-        <span className="pp-title">Agent Passport</span>
+        <span className="pp-title">Wist</span>
         {issued === undefined ? null : <span className="mono dim">{issued}</span>}
       </div>
       {children}

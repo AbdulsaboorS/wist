@@ -1,4 +1,4 @@
-import { PassportBundleSchema, type PassportBundle } from "@agent-passport/api";
+import { PassportBundleSchema, type PassportBundle } from "@wist/api";
 import { lintSource } from "@secretlint/core";
 import { creator as recommendedSecretRules } from "@secretlint/secretlint-rule-preset-recommend";
 

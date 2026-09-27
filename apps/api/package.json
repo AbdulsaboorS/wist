@@ -1,5 +1,5 @@
 {
-  "name": "@agent-passport/api",
+  "name": "@wist/api",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -21,9 +21,9 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@agent-passport/domain": "workspace:*",
-    "@agent-passport/fixtures": "workspace:*",
-    "@agent-passport/intelligence": "workspace:*",
+    "@wist/domain": "workspace:*",
+    "@wist/fixtures": "workspace:*",
+    "@wist/intelligence": "workspace:*",
     "@hono/node-server": "1.19.11",
     "@hono/zod-openapi": "1.6.3",
     "hono": "4.13.8",

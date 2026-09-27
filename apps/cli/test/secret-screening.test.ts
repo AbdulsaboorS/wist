@@ -4,7 +4,7 @@ import {
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
+} from "@wist/fixtures";
 import { describe, expect, it } from "vitest";
 
 import { screenForSecrets } from "../src/index.js";

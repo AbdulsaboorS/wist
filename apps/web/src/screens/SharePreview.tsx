@@ -18,7 +18,7 @@ const PROPOSED_SCOPES = ["project:read", "handoff:read", "setup-plan:read"] as c
 
 const PROPOSED_HOURS = 24;
 
-const DEFAULT_RELAY_URL = "https://agent-passport-relay.feedback-signal.workers.dev";
+const DEFAULT_RELAY_URL = "https://wist-relay.feedback-signal.workers.dev";
 
 export function SharePreview() {
   const { state, reload } = usePassport();

@@ -1,10 +1,10 @@
-# Agent Passport
+# Wist
 
-Agent Passport is the portable representation of a person's projects, working context, capabilities, and destination-specific readiness across AI assistants and computers.
+Wist keeps a Passport: the portable representation of a person's projects, working context, capabilities, and destination-specific readiness across AI assistants and computers.
 
 ## Language
 
-**Agent Passport**:
+**Passport**:
 The durable, user-controlled record that makes work and capabilities portable across assistants and runtimes.
 _Avoid_: Agent wallet, profile, backup
 
@@ -41,11 +41,11 @@ A portable declaration of what a Runtime must install, configure, authorize, and
 _Avoid_: Script, environment dump
 
 **Connector**:
-An integration through which a destination assistant can retrieve authorized Agent Passport data and report readiness.
+An integration through which a destination assistant can retrieve authorized Passport data and report readiness.
 _Avoid_: Plugin, adapter when referring to the user-facing integration
 
 **Source Agent**:
-The coding agent that contributes current Project context and Capability declarations to an Agent Passport.
+The coding agent that contributes current Project context and Capability declarations to a Passport.
 _Avoid_: Origin agent, sender
 
 **Destination Assistant**:

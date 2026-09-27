@@ -1,4 +1,4 @@
-import { projectFixture } from "@agent-passport/fixtures";
+import { projectFixture } from "@wist/fixtures";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { InMemoryPassportStore, PassportService, createPassportApp } from "../src/index.js";

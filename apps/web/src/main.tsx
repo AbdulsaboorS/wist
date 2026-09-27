@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-import "@agent-passport/ui/fonts.css";
-import "@agent-passport/ui/tokens.css";
+import "@wist/ui/fonts.css";
+import "@wist/ui/tokens.css";
 import "./styles/base.css";
 
 import { App, NotFound } from "./App";

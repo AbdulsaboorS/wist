@@ -19,7 +19,7 @@ function localRequest(options: { host?: string; origin?: string; token?: string 
   }
 
   if (options.token !== undefined) {
-    headers.set("X-Agent-Passport-Local-Token", options.token);
+    headers.set("X-Wist-Local-Token", options.token);
   }
 
   return new Request(`${origin}/api/bootstrap`, { headers });
@@ -63,7 +63,7 @@ describe("loopback daemon security", () => {
     const response = await fetch(`${dashboardUrl.origin}/api/bootstrap`, {
       headers: {
         Origin: dashboardUrl.origin,
-        "X-Agent-Passport-Local-Token": daemon.token,
+        "X-Wist-Local-Token": daemon.token,
       },
     });
 
@@ -86,7 +86,7 @@ describe("loopback daemon security", () => {
     expect(page.status).toBe(200);
     expect(page.headers.get("Content-Type")).toContain("text/html");
     expect(page.headers.get("Content-Security-Policy")).toContain("connect-src 'self'");
-    expect(await page.text()).toContain("Agent Passport");
+    expect(await page.text()).toContain("Wist");
     expect(api.status).toBe(401);
     expect(traversal.status).toBe(404);
   });

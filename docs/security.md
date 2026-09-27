@@ -1,6 +1,6 @@
 # Security requirements
 
-Agent Passport describes powerful access without becoming a credential-transfer system.
+Wist describes powerful access without becoming a credential-transfer system.
 
 ## Invariants
 

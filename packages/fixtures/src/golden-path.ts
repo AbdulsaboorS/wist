@@ -4,7 +4,7 @@ import {
   ProjectSchema,
   RuntimeSchema,
   SetupPlanSchema,
-} from "@agent-passport/domain";
+} from "@wist/domain";
 
 import {
   codexCliCapability,
@@ -17,13 +17,13 @@ const capturedAt = "2026-09-20T19:00:00.000Z";
 export const projectFixture = ProjectSchema.parse({
   schemaVersion: "1",
   id: "44444444-4444-4444-8444-444444444444",
-  name: "Agent Passport",
+  name: "Wist",
   goal: "Continue a coding Project across assistants without moving raw credentials.",
   repository: {
     provider: "github",
     owner: "example",
-    name: "agent-passport",
-    url: "https://github.com/example/agent-passport",
+    name: "wist",
+    url: "https://github.com/example/wist",
     defaultBranch: "main",
     activeBranch: "codex/mvp",
     revision: "6f06e5d89883c46c1ea09b2f3391cfbab46da8eb",
@@ -183,7 +183,7 @@ export const connectionFixtures = [
     id: "77777777-7777-4777-8777-777777777773",
     runtimeId: museRuntimeFixture.id,
     capabilityId: passportConnectorCapability.id,
-    provider: "agent-passport",
+    provider: "wist",
     status: "pending",
     authorizationMethod: "oauth",
     scopes: ["project:read", "handoff:read", "setup-plan:read"],
@@ -243,7 +243,7 @@ export const setupPlanFixture = SetupPlanSchema.parse({
       status: "pending",
       verification: {
         kind: "https",
-        endpoint: "https://connector.agent-passport.test/v1/projects",
+        endpoint: "https://connector.wist.test/v1/projects",
       },
     },
   ],

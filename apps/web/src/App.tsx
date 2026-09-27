@@ -6,7 +6,7 @@ export function App() {
       <header className="app-header">
         <div className="app-brand">
           <Link className="wordmark" to="/">
-            Agent Passport
+            Wist
           </Link>
           <nav className="app-nav mono" aria-label="Dashboard">
             <NavLink to="/" end>

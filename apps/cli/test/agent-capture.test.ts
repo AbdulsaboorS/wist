@@ -4,8 +4,8 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { DatabaseSync } from "node:sqlite";
 
-import { PassportBundleSchema } from "@agent-passport/api";
-import { inspectSetupPlan } from "@agent-passport/domain";
+import { PassportBundleSchema } from "@wist/api";
+import { inspectSetupPlan } from "@wist/domain";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import {
@@ -38,7 +38,7 @@ describe("Source Agent capture", () => {
     execFileSync("git", ["-C", repository, ...args], { stdio: "pipe" });
 
   beforeEach(() => {
-    repository = mkdtempSync(join(tmpdir(), "agent-passport-capture-"));
+    repository = mkdtempSync(join(tmpdir(), "wist-capture-"));
     git("init", "--initial-branch=main");
     git(
       "-c",

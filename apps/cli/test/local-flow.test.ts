@@ -1,18 +1,18 @@
 import { DatabaseSync } from "node:sqlite";
 import { resolve } from "node:path";
 
-import { InMemoryPassportStore, PassportService, createPassportApp } from "@agent-passport/api";
+import { InMemoryPassportStore, PassportService, createPassportApp } from "@wist/api";
 import {
   goldenPathCapabilities,
   handoffFixture,
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
+} from "@wist/fixtures";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
 
-import { PassportBundleSchema } from "@agent-passport/api";
+import { PassportBundleSchema } from "@wist/api";
 
 import {
   InMemoryConnectionSecretStore,
@@ -61,7 +61,7 @@ describe("secured local workflow", () => {
         method: options.method ?? "GET",
         headers: {
           Origin: options.origin ?? origin,
-          "X-Agent-Passport-Local-Token": options.token ?? token,
+          "X-Wist-Local-Token": options.token ?? token,
           "Content-Type": "application/json",
         },
       };

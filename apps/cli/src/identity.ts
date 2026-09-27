@@ -7,16 +7,16 @@ import {
   type DestinationAccessScope,
   type Ed25519PublicKey,
   type IdentityRegistrationRequest,
-} from "@agent-passport/api";
+} from "@wist/api";
 import { SignJWT, calculateJwkThumbprint, exportJWK, generateKeyPair, importJWK } from "jose";
 
-const RELAY_AUDIENCE = "agent-passport-relay";
+const RELAY_AUDIENCE = "wist-relay";
 
 const OWNER_TOKEN_LIFETIME_SECONDS = 5 * 60;
 
 const CONNECTION_TOKEN_LIFETIME_SECONDS = 24 * 60 * 60;
 
-const IDENTITY_KEYCHAIN_SERVICE = "dev.agentpassport.identity";
+const IDENTITY_KEYCHAIN_SERVICE = "dev.wist.identity";
 
 const IDENTITY_KEYCHAIN_ACCOUNT = "default-ed25519-v1";
 
@@ -137,7 +137,7 @@ export class LocalIdentityManager {
       },
       {
         subject: identity.id,
-        type: "agent-passport-identity+jwt",
+        type: "wist-identity+jwt",
         now,
         expiresAt: addSeconds(now, OWNER_TOKEN_LIFETIME_SECONDS),
       },
@@ -156,7 +156,7 @@ export class LocalIdentityManager {
       },
       {
         subject: options.projectId,
-        type: "agent-passport-owner+jwt",
+        type: "wist-owner+jwt",
         now: options.now,
         expiresAt: addSeconds(options.now, OWNER_TOKEN_LIFETIME_SECONDS),
       },
@@ -203,7 +203,7 @@ export class LocalIdentityManager {
       },
       {
         subject: options.shareId,
-        type: "agent-passport-connection+jwt",
+        type: "wist-connection+jwt",
         tokenId,
         now: options.now,
         expiresAt,

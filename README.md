@@ -1,13 +1,13 @@
-# Agent Passport
+# Wist
 
 **Your coding agent did the work. Your personal assistant picks it up.**
 
-GitHub connectors give assistants your code. Agent Passport gives them your context: what you're
+GitHub connectors give assistants your code. Wist gives them your context: what you're
 building, what's done, what was decided and why, what's blocking, and what comes next. You approve
 exactly what each assistant sees, and you can take it back at any time.
 
 ```sh
-npx agent-passport
+npx wist-cli
 ```
 
 ## How it works
@@ -45,12 +45,12 @@ The full security model is in [`docs/security.md`](./docs/security.md).
 
 ## Other ways to capture a Handoff
 
-You can also ask your agent directly. `agent-passport skill` prints instructions any coding agent
-can follow, and `agent-passport draft --schema` prints the exact format it writes.
+You can also ask your agent directly. `wist skill` prints instructions any coding agent
+can follow, and `wist draft --schema` prints the exact format it writes.
 
 ## Status
 
-Agent Passport is an early release. Today it shows one project at a time, Connections last up to
+Wist is an early release. Today it shows one project at a time, Connections last up to
 24 hours, and it runs on macOS only. Continuing the work inside Muse with private repositories and
 a coding agent is still being tested.
 
@@ -61,7 +61,7 @@ This is a TypeScript monorepo using pnpm and Turborepo.
 | Path | What it is |
 |---|---|
 | `packages/domain` | Versioned schemas and rules for Projects, Handoffs, Capabilities, and Setup Plans |
-| `apps/cli` | The `agent-passport` command, local dashboard server, Hand off, identity, and storage |
+| `apps/cli` | The `wist` command, local dashboard server, Hand off, identity, and storage |
 | `apps/web` | The local dashboard (React) |
 | `apps/api` | The relay: a Hono app on Cloudflare Workers with D1 |
 | `packages/intelligence` | Optional pre-publication checks on a draft |
@@ -70,14 +70,14 @@ This is a TypeScript monorepo using pnpm and Turborepo.
 corepack pnpm install
 corepack pnpm check        # format, lint, types, tests
 corepack pnpm build
-corepack pnpm --filter @agent-passport/cli release   # builds the npm package in apps/cli/release
+corepack pnpm --filter @wist/cli release   # builds the npm package in apps/cli/release
 ```
 
 Run the relay locally against local-only D1 state:
 
 ```sh
-corepack pnpm --filter @agent-passport/api d1:migrate:local
-corepack pnpm --filter @agent-passport/api dev
+corepack pnpm --filter @wist/api d1:migrate:local
+corepack pnpm --filter @wist/api dev
 ```
 
 Architecture: [`docs/architecture.md`](./docs/architecture.md). Decision records:

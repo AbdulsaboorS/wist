@@ -1,4 +1,4 @@
-import { handoffFixture, projectFixture } from "@agent-passport/fixtures";
+import { handoffFixture, projectFixture } from "@wist/fixtures";
 import { describe, expect, it } from "vitest";
 
 import { JevCaptureAssessor, type JevEvaluator } from "../src/index.js";

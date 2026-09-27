@@ -21,7 +21,7 @@ import {
 import { PassportServiceError } from "./service.js";
 import type { PassportStore, StoredConnectionGrant } from "./store.js";
 
-const RELAY_AUDIENCE = "agent-passport-relay";
+const RELAY_AUDIENCE = "wist-relay";
 
 const MAX_CONNECTION_SECONDS = 24 * 60 * 60;
 
@@ -57,7 +57,7 @@ export class RelayAuthorizer {
       throw new PassportServiceError("invalid", "Identity does not match its public key.");
     }
 
-    const header = this.#protectedHeader(input.proof, "agent-passport-identity+jwt");
+    const header = this.#protectedHeader(input.proof, "wist-identity+jwt");
 
     if (header.kid !== identityId) {
       throw new PassportServiceError("invalid", "Identity proof names a different key.");
@@ -79,7 +79,7 @@ export class RelayAuthorizer {
   }
 
   async authorizeOwner(token: string, projectId: string): Promise<OwnerAuthorization> {
-    const header = this.#protectedHeader(token, "agent-passport-owner+jwt");
+    const header = this.#protectedHeader(token, "wist-owner+jwt");
     const identityId = this.#requiredKeyId(header.kid);
     const identity = await this.#store.getIdentity(identityId);
 
@@ -112,7 +112,7 @@ export class RelayAuthorizer {
       shareExpiresAt: string;
     },
   ): Promise<StoredConnectionGrant> {
-    const header = this.#protectedHeader(token, "agent-passport-connection+jwt");
+    const header = this.#protectedHeader(token, "wist-connection+jwt");
 
     if (header.kid !== expected.identityId) {
       throw new PassportServiceError("forbidden", "Connection was signed by another identity.");
@@ -158,7 +158,7 @@ export class RelayAuthorizer {
     requiredScope: Exclude<AccessScope, "project:write">,
     projectId?: string,
   ): Promise<ConnectionAuthorization> {
-    this.#protectedHeader(token, "agent-passport-connection+jwt");
+    this.#protectedHeader(token, "wist-connection+jwt");
     const untrusted = this.#decodedClaims(token);
     const record = await this.#store.getAuthorization(untrusted.jti);
 

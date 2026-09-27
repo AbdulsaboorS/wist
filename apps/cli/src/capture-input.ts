@@ -6,8 +6,8 @@ import {
   SensitivitySchema,
   type Capability,
   type SetupStep,
-} from "@agent-passport/domain";
-import type { PassportBundle } from "@agent-passport/api";
+} from "@wist/domain";
+import type { PassportBundle } from "@wist/api";
 import { z } from "zod";
 
 // Capabilities a Source Agent may request by key. The CLI owns the full declarations so an agent

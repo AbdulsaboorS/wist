@@ -1,4 +1,4 @@
-import { JevCaptureAssessor, TypeSafeJevEvaluator } from "@agent-passport/intelligence";
+import { JevCaptureAssessor, TypeSafeJevEvaluator } from "@wist/intelligence";
 import { serve } from "@hono/node-server";
 
 import { createPassportApp } from "./app.js";
@@ -23,4 +23,4 @@ const port = Number.parseInt(process.env.PORT ?? "8787", 10);
 
 serve({ fetch: app.fetch, port });
 
-process.stdout.write(`Agent Passport API listening on http://localhost:${port}\n`);
+process.stdout.write(`Wist API listening on http://localhost:${port}\n`);

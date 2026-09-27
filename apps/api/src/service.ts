@@ -1,10 +1,5 @@
-import {
-  HandoffSchema,
-  inspectSetupPlan,
-  RuntimeSchema,
-  type Runtime,
-} from "@agent-passport/domain";
-import type { CaptureAssessment, CaptureAssessor } from "@agent-passport/intelligence";
+import { HandoffSchema, inspectSetupPlan, RuntimeSchema, type Runtime } from "@wist/domain";
+import type { CaptureAssessment, CaptureAssessor } from "@wist/intelligence";
 
 import {
   MAX_COMPACT_RESPONSE_TOKENS,

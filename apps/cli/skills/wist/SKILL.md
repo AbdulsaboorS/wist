@@ -1,12 +1,12 @@
 ---
-name: agent-passport
-description: Capture a Handoff of the current repository's work into Agent Passport so another agent or assistant can continue it. Use when the user asks to hand off, pass on, save for later, or continue this work elsewhere.
+name: wist
+description: Capture a Handoff of the current repository's work into Wist so another agent or assistant can continue it. Use when the user asks to hand off, pass on, save for later, or continue this work elsewhere.
 ---
 
 # Capture a Handoff
 
 A Handoff tells the next agent where this work stands. You write the substance; the
-`agent-passport` CLI fills in identifiers, repository facts, and timestamps, then screens the
+`wist` CLI fills in identifiers, repository facts, and timestamps, then screens the
 result for credentials. The user reviews and approves it in their local dashboard. You never
 approve or share it.
 
@@ -36,14 +36,14 @@ Never include secrets, tokens, keys, passwords, environment values, cookies, or 
 data, even redacted. Capture rejects content that looks like a credential. Set `sensitivity` to
 `sensitive` if the work itself is confidential.
 
-Run `agent-passport draft --schema` for the exact JSON shape.
+Run `wist draft --schema` for the exact JSON shape.
 
 ## 3. Submit it
 
 From the repository root:
 
 ```sh
-agent-passport draft --repo "$(git rev-parse --show-toplevel)" <<'JSON'
+wist draft --repo "$(git rev-parse --show-toplevel)" <<'JSON'
 {
   "source": "claude-code",
   "project": { "name": "…", "goal": "…" },
@@ -66,4 +66,4 @@ and retry. Do not work around the credential screen.
 ## 4. Hand back to the user
 
 Tell the user the draft is ready and that they review, approve, and share it in the dashboard,
-which `agent-passport` opens. Summarize the goal and first next action in one or two sentences.
+which `wist` opens. Summarize the goal and first next action in one or two sentences.

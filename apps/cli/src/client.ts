@@ -3,7 +3,7 @@ import type {
   IdentityRegistrationRequest,
   PassportBundle,
   ProjectBrief,
-} from "@agent-passport/api";
+} from "@wist/api";
 
 type Fetch = (input: string | URL | Request, init?: RequestInit) => Promise<Response> | Response;
 
@@ -104,7 +104,7 @@ export class PassportApiClient {
 
     if (!response.ok) {
       const detail = await response.text();
-      throw new Error(`Agent Passport API returned ${response.status}: ${detail}`);
+      throw new Error(`Wist API returned ${response.status}: ${detail}`);
     }
 
     if (response.status === 204) {

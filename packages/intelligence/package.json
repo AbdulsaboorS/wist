@@ -1,5 +1,5 @@
 {
-  "name": "@agent-passport/intelligence",
+  "name": "@wist/intelligence",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -18,10 +18,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@agent-passport/domain": "workspace:*",
+    "@wist/domain": "workspace:*",
     "@typesafe-ai/sdk": "0.6.0"
   },
   "devDependencies": {
-    "@agent-passport/fixtures": "workspace:*"
+    "@wist/fixtures": "workspace:*"
   }
 }

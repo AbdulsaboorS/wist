@@ -1,4 +1,4 @@
-import type { Capability, CapabilityReadinessStatus } from "@agent-passport/domain";
+import type { Capability, CapabilityReadinessStatus } from "@wist/domain";
 
 import type { ReadinessRow } from "../data/snapshot";
 import { Ring } from "./Ring";

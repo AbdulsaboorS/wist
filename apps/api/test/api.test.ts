@@ -1,6 +1,6 @@
-import { HandoffSchema, SetupPlanSchema } from "@agent-passport/domain";
-import { projectFixture, setupPlanFixture } from "@agent-passport/fixtures";
-import type { CaptureAssessor } from "@agent-passport/intelligence";
+import { HandoffSchema, SetupPlanSchema } from "@wist/domain";
+import { projectFixture, setupPlanFixture } from "@wist/fixtures";
+import type { CaptureAssessor } from "@wist/intelligence";
 import { describe, expect, it } from "vitest";
 import { z } from "zod";
 

@@ -2,10 +2,10 @@
 
 ## Product architecture
 
-Agent Passport is a local-first, assistant-independent continuity hub with a narrow hosted relay:
+Wist is a local-first, assistant-independent continuity hub with a narrow hosted relay:
 
 ```text
-npx agent-passport -> local daemon -> Passport core + local store
+npx wist-cli -> local daemon -> Passport core + local store
                               |       |-> local dashboard on 127.0.0.1
                               |       +-> local keypair identity
                               |
@@ -29,7 +29,7 @@ Handoff, Capability, Runtime, Connection, or Setup Plan.
 
 ## How the promise is executed
 
-1. **Install:** `npx agent-passport` starts a daemon bound to `127.0.0.1`, creates a keypair on first
+1. **Install:** `npx wist-cli` starts a daemon bound to `127.0.0.1`, creates a keypair on first
    run, and opens the local dashboard. There is no sign-up or account.
 2. **Capture:** the Source Agent CLI reads only the selected repository and agent-authored handoff
    inputs, then validates a draft against the versioned domain schemas.
@@ -40,7 +40,7 @@ Handoff, Capability, Runtime, Connection, or Setup Plan.
    Project brief and current Handoff, and follows handles only when deeper context is needed.
 6. **Prepare:** deterministic code compares declared Capabilities with evidence reported by the Runtime
    and returns a declarative Setup Plan. It never assumes installation or authorization succeeded.
-7. **Authorize:** the person completes destination-side provider flows; Agent Passport records status,
+7. **Authorize:** the person completes destination-side provider flows; Wist records status,
    scope, storage mode, freshness, and revocation evidence, never the credential.
 8. **Continue:** the destination launches the selected coding agent with the approved Handoff and
    retrieves more context on demand.

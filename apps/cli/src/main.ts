@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import process from "node:process";
 import { createInterface } from "node:readline/promises";
 
-import { PassportBundleSchema, type PassportBundle } from "@agent-passport/api";
+import { PassportBundleSchema, type PassportBundle } from "@wist/api";
 
 import { z } from "zod";
 
@@ -113,7 +113,7 @@ async function main(): Promise<void> {
 
       process.stdout.write(
         `Draft Handoff captured for ${draft.project.name}: ${draft.handoff.goal}\n` +
-          "Review, approve, and share it in the dashboard: run `agent-passport`.\n",
+          "Review, approve, and share it in the dashboard: run `wist`.\n",
       );
     } finally {
       store.close();
@@ -123,7 +123,7 @@ async function main(): Promise<void> {
   }
 
   if (command === "skill") {
-    const skill = join(dirname(fileURLToPath(import.meta.url)), "..", "skills", "agent-passport");
+    const skill = join(dirname(fileURLToPath(import.meta.url)), "..", "skills", "wist");
     process.stdout.write(await readFile(join(skill, "SKILL.md"), "utf8"));
 
     return;
@@ -269,7 +269,7 @@ async function main(): Promise<void> {
   }
 
   process.stdout.write(
-    "Usage: agent-passport <serve|draft|skill|capture|validate|preview|assess|approve|publish|retrieve|revoke> [options]\n",
+    "Usage: wist <serve|draft|skill|capture|validate|preview|assess|approve|publish|retrieve|revoke> [options]\n",
   );
 }
 

@@ -1,5 +1,5 @@
-import type { PassportBundle } from "@agent-passport/api";
-import type { Capability, CapabilityReadiness } from "@agent-passport/domain";
+import type { PassportBundle } from "@wist/api";
+import type { Capability, CapabilityReadiness } from "@wist/domain";
 
 /*
  * What the dashboard renders. `PassportBundle` is the portable part and comes straight from the

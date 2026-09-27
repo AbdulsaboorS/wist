@@ -1,7 +1,7 @@
 import { readdir, readFile } from "node:fs/promises";
 import { URL as NodeUrl } from "node:url";
 
-import { museRuntimeFixture, projectFixture } from "@agent-passport/fixtures";
+import { museRuntimeFixture, projectFixture } from "@wist/fixtures";
 import { Miniflare } from "miniflare";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 

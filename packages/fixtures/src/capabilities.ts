@@ -1,4 +1,4 @@
-import { CapabilitySchema } from "@agent-passport/domain";
+import { CapabilitySchema } from "@wist/domain";
 
 export const githubCliCapability = CapabilitySchema.parse({
   schemaVersion: "1",
@@ -41,19 +41,19 @@ export const passportConnectorCapability = CapabilitySchema.parse({
   schemaVersion: "1",
   id: "33333333-3333-4333-8333-333333333333",
   kind: "connected-service",
-  name: "Agent Passport connector",
+  name: "Wist connector",
   description: "Retrieves only the Projects and Handoffs shared with this Runtime.",
   requirement: "required",
-  installationOptions: [{ kind: "remote", endpoint: "https://connector.agent-passport.test/v1" }],
+  installationOptions: [{ kind: "remote", endpoint: "https://connector.wist.test/v1" }],
   authorization: {
     required: true,
-    provider: "agent-passport",
+    provider: "wist",
     methods: ["oauth"],
     scopes: ["project:read", "handoff:read", "setup-plan:read"],
   },
   verification: {
     kind: "https",
-    endpoint: "https://connector.agent-passport.test/v1/projects",
+    endpoint: "https://connector.wist.test/v1/projects",
   },
 });
 

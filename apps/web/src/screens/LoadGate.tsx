@@ -27,8 +27,8 @@ export function LoadGate({ state, reload, emptyLabel, emptyBody, children }: Loa
       <div className="slot">
         <span className="label">Opened without its key</span>
         <p>
-          Open this dashboard from the link printed by the Agent Passport CLI. A new tab or daemon
-          launch needs a fresh link.
+          Open this dashboard from the link printed by the Wist CLI. A new tab or daemon launch
+          needs a fresh link.
         </p>
       </div>
     );

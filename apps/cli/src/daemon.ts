@@ -7,7 +7,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
-import { PassportBundleSchema } from "@agent-passport/api";
+import { PassportBundleSchema } from "@wist/api";
 import { z } from "zod";
 
 import type { HandOffRunner } from "./hand-off/run.js";
@@ -15,7 +15,7 @@ import type { LocalPassportWorkflow } from "./local-workflow.js";
 
 const LOOPBACK_HOST = "127.0.0.1";
 
-const LOCAL_TOKEN_HEADER = "X-Agent-Passport-Local-Token";
+const LOCAL_TOKEN_HEADER = "X-Wist-Local-Token";
 
 const MAX_REQUEST_BYTES = 1_000_000;
 

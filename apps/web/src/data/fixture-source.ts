@@ -5,7 +5,7 @@ import {
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
+} from "@wist/fixtures";
 
 import type { LoadState, PassportSnapshot, Share } from "./snapshot";
 

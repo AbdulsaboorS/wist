@@ -1,4 +1,4 @@
-import type { CapabilityReadinessStatus } from "@agent-passport/domain";
+import type { CapabilityReadinessStatus } from "@wist/domain";
 
 type RingProps = {
   readonly status: CapabilityReadinessStatus;

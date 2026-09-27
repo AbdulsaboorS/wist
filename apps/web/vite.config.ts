@@ -7,12 +7,12 @@ import { defineConfig, loadEnv } from "vite";
  * proxies `/api` to a running daemon.
  *
  * The daemon accepts a request only when `Origin` equals its own loopback origin exactly, so the
- * proxy rewrites the browser's Vite origin to the daemon's. Point `AGENT_PASSPORT_DAEMON_ORIGIN`
- * at the origin printed by `npx agent-passport`.
+ * proxy rewrites the browser's Vite origin to the daemon's. Point `WIST_DAEMON_ORIGIN`
+ * at the origin printed by `npx wist-cli`.
  */
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "AGENT_PASSPORT_");
-  const daemonOrigin = env.AGENT_PASSPORT_DAEMON_ORIGIN ?? "http://127.0.0.1:7878";
+  const env = loadEnv(mode, process.cwd(), "WIST_");
+  const daemonOrigin = env.WIST_DAEMON_ORIGIN ?? "http://127.0.0.1:7878";
 
   return {
     plugins: [react()],

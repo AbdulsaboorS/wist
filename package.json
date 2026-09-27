@@ -1,5 +1,5 @@
 {
-  "name": "agent-passport",
+  "name": "wist",
   "version": "0.0.0",
   "private": true,
   "description": "Portable project context and capability contracts for AI assistants.",

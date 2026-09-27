@@ -1,4 +1,4 @@
-import type { Handoff, Project } from "@agent-passport/domain";
+import type { Handoff, Project } from "@wist/domain";
 
 export const CAPTURE_JEV_MODEL = "jev-1.13.0";
 

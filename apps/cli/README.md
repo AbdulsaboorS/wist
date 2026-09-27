@@ -1,9 +1,9 @@
-# Agent Passport
+# Wist
 
 **Your coding agent did the work. Your personal assistant picks it up.**
 
 ```sh
-npx agent-passport
+npx wist-cli
 ```
 
 The dashboard opens in your browser and lists projects you worked on with Claude Code or Codex.
@@ -26,11 +26,11 @@ credential are refused.
 
 | Command | What it does |
 |---|---|
-| `agent-passport` | Opens the dashboard |
-| `agent-passport serve` | Starts the dashboard without opening a browser |
-| `agent-passport skill` | Prints instructions any coding agent can follow to write a Handoff |
-| `agent-passport draft --schema` | Prints the Handoff format an agent writes |
-| `agent-passport draft --repo <path>` | Saves a Handoff an agent wrote (JSON on stdin) as a draft |
+| `wist` | Opens the dashboard |
+| `wist serve` | Starts the dashboard without opening a browser |
+| `wist skill` | Prints instructions any coding agent can follow to write a Handoff |
+| `wist draft --schema` | Prints the Handoff format an agent writes |
+| `wist draft --repo <path>` | Saves a Handoff an agent wrote (JSON on stdin) as a draft |
 
 Source, security model, and issues: https://github.com/AbdulsaboorS/agent-passport
 

@@ -2,7 +2,7 @@ import { execFile } from "node:child_process";
 import { realpath } from "node:fs/promises";
 import { promisify } from "node:util";
 
-import type { PassportBundle } from "@agent-passport/api";
+import type { PassportBundle } from "@wist/api";
 
 import {
   bundleFromDraftInput,

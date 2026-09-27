@@ -209,7 +209,7 @@ async function codexReply(
   runCommand: RunAgentCommand,
   options: { cwd: string; timeoutMs: number },
 ): Promise<string> {
-  const directory = await mkdtemp(join(tmpdir(), "agent-passport-hand-off-"));
+  const directory = await mkdtemp(join(tmpdir(), "wist-hand-off-"));
   const output = join(directory, "reply.txt");
 
   try {
@@ -293,7 +293,7 @@ export const runAgentCommand: RunAgentCommand = async (command, args, options) =
 };
 
 function handoffPrompt(agent: SourceAgentKind, schema: string): string {
-  return `The user clicked "Hand off" in Agent Passport. Write a Handoff of this session's work so a
+  return `The user clicked "Hand off" in Wist. Write a Handoff of this session's work so a
 capable assistant who has never seen this conversation can continue it. Use only what you already
 know from this session; you have no tools.
 

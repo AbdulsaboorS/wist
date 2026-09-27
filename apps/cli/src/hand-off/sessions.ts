@@ -10,7 +10,7 @@ const execFileAsync = promisify(execFile);
 
 export type SourceAgentKind = "claude-code" | "codex";
 
-/** A coding-agent conversation on this computer that Agent Passport can resume to write a Handoff. */
+/** A coding-agent conversation on this computer that Wist can resume to write a Handoff. */
 export type AgentSession = {
   readonly agent: SourceAgentKind;
   readonly sessionId: string;

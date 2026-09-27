@@ -9,12 +9,12 @@ import {
   PassportBundleSchema,
   type DestinationAccessScope,
   type PassportBundle,
-} from "@agent-passport/api";
+} from "@wist/api";
 
 import { approveDraft, validateDraft } from "./draft.js";
 import type { ConnectionToken } from "./identity.js";
 
-const CONNECTION_SERVICE = "dev.agentpassport.connection";
+const CONNECTION_SERVICE = "dev.wist.connection";
 
 type ConnectionRow = {
   connection_id: string;
@@ -554,7 +554,7 @@ export class LocalPassportStore {
 }
 
 function defaultLocalDirectory(): string {
-  return join(homedir(), "Library", "Application Support", "Agent Passport");
+  return join(homedir(), "Library", "Application Support", "Wist");
 }
 
 function ensurePrivateDirectory(directory: string): void {

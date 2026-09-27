@@ -3,15 +3,15 @@ import {
   PassportService,
   createPassportApp,
   type PassportBundle,
-} from "@agent-passport/api";
+} from "@wist/api";
 import {
   goldenPathCapabilities,
   handoffFixture,
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
-import type { CaptureAssessor } from "@agent-passport/intelligence";
+} from "@wist/fixtures";
+import type { CaptureAssessor } from "@wist/intelligence";
 import { describe, expect, it } from "vitest";
 
 import {

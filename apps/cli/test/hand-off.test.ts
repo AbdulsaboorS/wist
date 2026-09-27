@@ -39,7 +39,7 @@ describe("Hand off", () => {
     execFileSync("git", ["-C", repository, ...args], { stdio: "pipe" });
 
   beforeEach(() => {
-    root = realpathSync(mkdtempSync(join(tmpdir(), "agent-passport-hand-off-")));
+    root = realpathSync(mkdtempSync(join(tmpdir(), "wist-hand-off-")));
     repository = join(root, "widgets");
     mkdirSync(repository);
     git("init", "--initial-branch=main");

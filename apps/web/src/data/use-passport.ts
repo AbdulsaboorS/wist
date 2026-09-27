@@ -47,7 +47,7 @@ export async function localApi<T>(
 
   if (token === undefined) throw new Error("Dashboard access expired. Reopen it from the CLI.");
 
-  const headers = new Headers({ "X-Agent-Passport-Local-Token": token });
+  const headers = new Headers({ "X-Wist-Local-Token": token });
   const init: RequestInit = { method, headers };
 
   if (body !== undefined) {

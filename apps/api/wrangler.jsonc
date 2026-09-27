@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "agent-passport-relay",
+  "name": "wist-relay",
   "main": "src/worker.ts",
   "compatibility_date": "2026-09-15",
   "triggers": { "crons": ["17 * * * *"] },

@@ -190,21 +190,21 @@ importers:
 
   apps/api:
     dependencies:
-      '@agent-passport/domain':
-        specifier: workspace:*
-        version: link:../../packages/domain
-      '@agent-passport/fixtures':
-        specifier: workspace:*
-        version: link:../../packages/fixtures
-      '@agent-passport/intelligence':
-        specifier: workspace:*
-        version: link:../../packages/intelligence
       '@hono/node-server':
         specifier: 1.19.11
         version: 1.19.11(hono@4.13.8)
       '@hono/zod-openapi':
         specifier: 1.6.3
         version: 1.6.3(hono@4.13.8)(zod@4.6.5)
+      '@wist/domain':
+        specifier: workspace:*
+        version: link:../../packages/domain
+      '@wist/fixtures':
+        specifier: workspace:*
+        version: link:../../packages/fixtures
+      '@wist/intelligence':
+        specifier: workspace:*
+        version: link:../../packages/intelligence
       hono:
         specifier: 4.13.8
         version: 4.13.8
@@ -227,15 +227,6 @@ importers:
 
   apps/cli:
     dependencies:
-      '@agent-passport/api':
-        specifier: workspace:*
-        version: link:../api
-      '@agent-passport/domain':
-        specifier: workspace:*
-        version: link:../../packages/domain
-      '@agent-passport/intelligence':
-        specifier: workspace:*
-        version: link:../../packages/intelligence
       '@napi-rs/keyring':
         specifier: 2.1.0
         version: 2.1.0
@@ -245,6 +236,15 @@ importers:
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: 13.0.5
         version: 13.0.5
+      '@wist/api':
+        specifier: workspace:*
+        version: link:../api
+      '@wist/domain':
+        specifier: workspace:*
+        version: link:../../packages/domain
+      '@wist/intelligence':
+        specifier: workspace:*
+        version: link:../../packages/intelligence
       jose:
         specifier: 6.2.12
         version: 6.2.12
@@ -252,10 +252,10 @@ importers:
         specifier: 4.6.5
         version: 4.6.5
     devDependencies:
-      '@agent-passport/fixtures':
+      '@wist/fixtures':
         specifier: workspace:*
         version: link:../../packages/fixtures
-      '@agent-passport/web':
+      '@wist/web':
         specifier: workspace:*
         version: link:../web
       esbuild:
@@ -264,13 +264,13 @@ importers:
 
   apps/web:
     dependencies:
-      '@agent-passport/domain':
+      '@wist/domain':
         specifier: workspace:*
         version: link:../../packages/domain
-      '@agent-passport/fixtures':
+      '@wist/fixtures':
         specifier: workspace:*
         version: link:../../packages/fixtures
-      '@agent-passport/ui':
+      '@wist/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -283,9 +283,6 @@ importers:
         specifier: 8.4.0
         version: 8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
     devDependencies:
-      '@agent-passport/api':
-        specifier: workspace:*
-        version: link:../api
       '@types/react':
         specifier: 19.3.0
         version: 19.3.0
@@ -295,6 +292,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: 6.1.1
         version: 6.1.1(vite@8.3.0(@types/node@24.13.6)(esbuild@0.28.1)(yaml@2.9.1))
+      '@wist/api':
+        specifier: workspace:*
+        version: link:../api
       vite:
         specifier: 8.3.0
         version: 8.3.0(@types/node@24.13.6)(esbuild@0.28.1)(yaml@2.9.1)
@@ -307,20 +307,20 @@ importers:
 
   packages/fixtures:
     dependencies:
-      '@agent-passport/domain':
+      '@wist/domain':
         specifier: workspace:*
         version: link:../domain
 
   packages/intelligence:
     dependencies:
-      '@agent-passport/domain':
-        specifier: workspace:*
-        version: link:../domain
       '@typesafe-ai/sdk':
         specifier: 0.6.0
         version: 0.6.0
+      '@wist/domain':
+        specifier: workspace:*
+        version: link:../domain
     devDependencies:
-      '@agent-passport/fixtures':
+      '@wist/fixtures':
         specifier: workspace:*
         version: link:../fixtures
 

@@ -1,8 +1,8 @@
 {
-  "name": "@agent-passport/ui",
+  "name": "@wist/ui",
   "version": "0.0.0",
   "private": true,
-  "description": "Design tokens and self-hosted typefaces for Agent Passport surfaces.",
+  "description": "Design tokens and self-hosted typefaces for Wist surfaces.",
   "type": "module",
   "exports": {
     "./tokens.css": "./tokens.css",

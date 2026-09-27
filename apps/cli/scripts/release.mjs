@@ -7,8 +7,8 @@ import { fileURLToPath } from "node:url";
 
 import { build } from "esbuild";
 
-// The product name is still open; the npm name `agent-passport` belongs to someone else.
-const PACKAGE_NAME = process.env.PACKAGE_NAME ?? "agent-passport";
+// The bare npm name `wist` belongs to someone else; the command is still `wist`.
+const PACKAGE_NAME = process.env.PACKAGE_NAME ?? "wist-cli";
 
 const VERSION = process.env.PACKAGE_VERSION ?? "0.1.0";
 
@@ -23,7 +23,7 @@ const manifest = JSON.parse(await readFile(join(cli, "package.json"), "utf8"));
 const dashboard = join(root, "apps", "web", "dist");
 
 await readFile(join(dashboard, "index.html")).catch(() => {
-  throw new Error("Build the dashboard first: pnpm --filter @agent-passport/web build");
+  throw new Error("Build the dashboard first: pnpm --filter @wist/web build");
 });
 
 await rm(out, { recursive: true, force: true });
@@ -82,7 +82,7 @@ await writeFile(
       license: "Apache-2.0",
       repository: { type: "git", url: "git+https://github.com/AbdulsaboorS/agent-passport.git" },
       type: "module",
-      bin: { [PACKAGE_NAME]: "./dist/main.js" },
+      bin: { wist: "./dist/main.js" },
       files: ["dist", "skills"],
       engines: { node: ">=24.0.0" },
       os: ["darwin"],

@@ -1,4 +1,4 @@
-import type { Runtime } from "@agent-passport/domain";
+import type { Runtime } from "@wist/domain";
 
 import type { ConnectionTokenClaims, Ed25519PublicKey, PassportBundle } from "./contracts.js";
 

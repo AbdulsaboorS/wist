@@ -5,7 +5,7 @@ import {
   RuntimeSchema,
   SetupPlanSchema,
   type Handoff,
-} from "@agent-passport/domain";
+} from "@wist/domain";
 import { z } from "zod";
 
 export const AccessScopeSchema = z.enum([

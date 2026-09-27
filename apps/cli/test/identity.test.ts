@@ -33,7 +33,7 @@ describe("local identity", () => {
     expect(decodeProtectedHeader(registration.proof)).toMatchObject({
       alg: "EdDSA",
       kid: identity.id,
-      typ: "agent-passport-identity+jwt",
+      typ: "wist-identity+jwt",
     });
     expect(decodeJwt(ownerToken)).toMatchObject({
       kind: "owner",
@@ -55,7 +55,7 @@ describe("local identity", () => {
     await expect(
       jwtVerify(connection.token, publicKey, {
         algorithms: ["EdDSA"],
-        audience: "agent-passport-relay",
+        audience: "wist-relay",
         issuer: identity.id,
         currentDate: now,
       }),

@@ -1,4 +1,4 @@
-import { RuntimeSchema, type Runtime } from "@agent-passport/domain";
+import { RuntimeSchema, type Runtime } from "@wist/domain";
 
 import {
   DestinationAccessScopeSchema,

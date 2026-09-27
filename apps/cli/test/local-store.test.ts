@@ -8,7 +8,7 @@ import {
   museRuntimeFixture,
   projectFixture,
   setupPlanFixture,
-} from "@agent-passport/fixtures";
+} from "@wist/fixtures";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { InMemoryConnectionSecretStore, LocalPassportStore, captureDraft } from "../src/index.js";
@@ -30,7 +30,7 @@ describe("durable local Passport store", () => {
   });
 
   it("survives restart, keeps the bearer out of SQLite, and stops reveal after revocation", async () => {
-    const directory = mkdtempSync(join(tmpdir(), "agent-passport-local-"));
+    const directory = mkdtempSync(join(tmpdir(), "wist-local-"));
     directories.push(directory);
     const secrets = new InMemoryConnectionSecretStore();
     const first = LocalPassportStore.open(secrets, directory);
@@ -92,7 +92,7 @@ describe("durable local Passport store", () => {
   });
 
   it("refuses a local database readable by other users", () => {
-    const directory = mkdtempSync(join(tmpdir(), "agent-passport-local-"));
+    const directory = mkdtempSync(join(tmpdir(), "wist-local-"));
     directories.push(directory);
     const store = LocalPassportStore.open(new InMemoryConnectionSecretStore(), directory);
     store.close();

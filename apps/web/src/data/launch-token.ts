@@ -7,7 +7,7 @@
 
 const TOKEN_KEY = "token";
 
-const SESSION_TOKEN_KEY = "agent-passport-launch-token";
+const SESSION_TOKEN_KEY = "wist-launch-token";
 
 let launchToken: string | undefined;
 
