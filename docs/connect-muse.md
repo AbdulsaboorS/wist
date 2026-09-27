@@ -12,7 +12,7 @@ takes about five minutes the first time. Afterwards, sending Muse a newer Handof
 ## 1. Open the dashboard
 
 ```sh
-npx wist-cli
+npx @wist/cli
 ```
 
 Your browser opens the dashboard at `127.0.0.1`. It runs only on your computer, and there's no

@@ -7,7 +7,7 @@ building, what's done, what was decided and why, what's blocking, and what comes
 exactly what each assistant sees, and you can take it back at any time.
 
 ```sh
-npx wist-cli
+npx @wist/cli
 ```
 
 ## How it works

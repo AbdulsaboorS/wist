@@ -7,8 +7,9 @@ import { fileURLToPath } from "node:url";
 
 import { build } from "esbuild";
 
-// The bare npm name `wist` belongs to someone else; the command is still `wist`.
-const PACKAGE_NAME = process.env.PACKAGE_NAME ?? "wist-cli";
+// The bare npm name `wist` belongs to someone else, and npm rejects `wist-cli` as too close to
+// `jest-cli`; the scoped package still installs the `wist` command.
+const PACKAGE_NAME = process.env.PACKAGE_NAME ?? "@wist/cli";
 
 const VERSION = process.env.PACKAGE_VERSION ?? "0.1.0";
 

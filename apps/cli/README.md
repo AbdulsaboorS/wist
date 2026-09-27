@@ -3,7 +3,7 @@
 **Your coding agent did the work. Your personal assistant picks it up.**
 
 ```sh
-npx wist-cli
+npx @wist/cli
 ```
 
 The dashboard opens in your browser and lists projects you worked on with Claude Code or Codex.

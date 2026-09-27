@@ -5,7 +5,7 @@
 Wist is a local-first, assistant-independent continuity hub with a narrow hosted relay:
 
 ```text
-npx wist-cli -> local daemon -> Passport core + local store
+npx @wist/cli -> local daemon -> Passport core + local store
                               |       |-> local dashboard on 127.0.0.1
                               |       +-> local keypair identity
                               |
@@ -29,7 +29,7 @@ Handoff, Capability, Runtime, Connection, or Setup Plan.
 
 ## How the promise is executed
 
-1. **Install:** `npx wist-cli` starts a daemon bound to `127.0.0.1`, creates a keypair on first
+1. **Install:** `npx @wist/cli` starts a daemon bound to `127.0.0.1`, creates a keypair on first
    run, and opens the local dashboard. There is no sign-up or account.
 2. **Capture:** the Source Agent CLI reads only the selected repository and agent-authored handoff
    inputs, then validates a draft against the versioned domain schemas.
