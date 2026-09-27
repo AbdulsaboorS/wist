@@ -38,7 +38,7 @@ key, or token and refuses to continue if it finds one.
 ## 4. Give Muse the link
 
 Click **Reveal Connection URL** and copy it. It looks like
-`https://wist-relay.feedback-signal.workers.dev/connect#token=…`.
+`https://relay.wist.fyi/connect#token=…`.
 
 In Muse, send:
 

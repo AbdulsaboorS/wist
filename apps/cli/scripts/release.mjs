@@ -11,7 +11,7 @@ import { build } from "esbuild";
 // `jest-cli`; the scoped package still installs the `wist` command.
 const PACKAGE_NAME = process.env.PACKAGE_NAME ?? "@wist/cli";
 
-const VERSION = process.env.PACKAGE_VERSION ?? "0.1.0";
+const VERSION = process.env.PACKAGE_VERSION ?? "0.1.1";
 
 const cli = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -81,6 +81,7 @@ await writeFile(
       description:
         "Hand off your coding agent's work to your personal assistant, with your approval.",
       license: "Apache-2.0",
+      homepage: "https://wist.fyi",
       repository: { type: "git", url: "git+https://github.com/AbdulsaboorS/wist.git" },
       type: "module",
       bin: { wist: "dist/main.js" },
