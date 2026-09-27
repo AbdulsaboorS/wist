@@ -13,7 +13,7 @@ The dashboard opens in your browser and lists projects you worked on with Claude
    your project changes.
 2. Review exactly what will be shared, then approve it.
 3. Give your assistant the private Connection link. Muse is the first supported assistant:
-   [Connect Muse](https://github.com/AbdulsaboorS/agent-passport/blob/main/docs/connect-muse.md).
+   [Connect Muse](https://github.com/AbdulsaboorS/wist/blob/main/docs/connect-muse.md).
 4. Send newer Handoffs through the same link, or revoke access in one click.
 
 Passwords, tokens, and keys never travel. Handoffs name the tools a project needs, and your
@@ -32,6 +32,6 @@ credential are refused.
 | `wist draft --schema` | Prints the Handoff format an agent writes |
 | `wist draft --repo <path>` | Saves a Handoff an agent wrote (JSON on stdin) as a draft |
 
-Source, security model, and issues: https://github.com/AbdulsaboorS/agent-passport
+Source, security model, and issues: https://github.com/AbdulsaboorS/wist
 
 Licensed under Apache-2.0.

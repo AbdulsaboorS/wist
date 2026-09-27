@@ -80,7 +80,7 @@ await writeFile(
       description:
         "Hand off your coding agent's work to your personal assistant, with your approval.",
       license: "Apache-2.0",
-      repository: { type: "git", url: "git+https://github.com/AbdulsaboorS/agent-passport.git" },
+      repository: { type: "git", url: "git+https://github.com/AbdulsaboorS/wist.git" },
       type: "module",
       bin: { wist: "./dist/main.js" },
       files: ["dist", "skills"],
