@@ -11,7 +11,8 @@ protects you. The full model is in
 
 - Your coding agent drafts Handoffs on your computer, and you review them there.
 - The dashboard answers only requests from your own computer.
-- Only a Handoff you approved reaches the relay, and only when you publish or send it.
+- Only a Handoff you approved reaches the relay, Wist's server at `relay.wist.fyi`, and only when
+  you publish or send it.
 
 ## No credentials travel
 

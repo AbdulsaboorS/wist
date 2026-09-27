@@ -25,6 +25,10 @@ revision, and a setup plan that lists how to install, sign in to, and verify eac
 
 Only a Handoff you approved, and only when you click **Publish share** or **Send to Muse**.
 
+Wist sends it to the relay, Wist's server at `relay.wist.fyi`. The relay holds the Handoff so your
+assistant can read it while your computer is off. It stores only Handoffs you approved, deletes
+them when you revoke access, and never receives your keys or sign-ins.
+
 ## What stays on your computer
 
 - Your key pair, in the macOS Keychain.

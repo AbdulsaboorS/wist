@@ -18,7 +18,8 @@ To create a Connection link, follow these steps:
 1. On the **Share** screen, click **Publish share**.
 
    Wist sends only the approved Handoff to the relay and creates a Connection link that expires
-   after 24 hours.
+   after 24 hours. The relay is Wist's server at `relay.wist.fyi`. It holds the Handoffs you
+   publish so your assistant can read them while your computer is off.
 
 2. Click **Reveal Connection URL**, then copy the link. It looks like
    `https://relay.wist.fyi/connect#token=…`.
