@@ -82,7 +82,7 @@ await writeFile(
       license: "Apache-2.0",
       repository: { type: "git", url: "git+https://github.com/AbdulsaboorS/wist.git" },
       type: "module",
-      bin: { wist: "./dist/main.js" },
+      bin: { wist: "dist/main.js" },
       files: ["dist", "skills"],
       engines: { node: ">=24.0.0" },
       os: ["darwin"],
